@@ -4,7 +4,12 @@ class lastCoulmn extends StatelessWidget {
   final String? image;
   final String? title;
   final String? suTitle;
-  const lastCoulmn({super.key, required this.image,required this.title,required this.suTitle});
+  const lastCoulmn({
+    super.key,
+    required this.image,
+    required this.title,
+    required this.suTitle
+  });
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -14,10 +19,14 @@ class lastCoulmn extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(6),
-              image: DecorationImage(image: AssetImage(image!),fit: BoxFit.cover)
+              image: DecorationImage(
+                  image: AssetImage(image!),
+                  fit: BoxFit.cover)
           ),
         ),
+
         SizedBox(height: 7,),
+
         ListTile(
           title: Text(
             title!,
@@ -29,6 +38,7 @@ class lastCoulmn extends StatelessWidget {
                 fontSize: 14)
           ),
         ),
+
         SizedBox(height: 7,)
       ],
     );

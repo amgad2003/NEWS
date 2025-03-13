@@ -9,21 +9,34 @@ class fristContainer extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 150,
-      width: 200,
-      alignment: Alignment.bottomLeft,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(7),
-          image: DecorationImage(image: AssetImage(image!),fit: BoxFit.cover)),
-      child: SingleChildScrollView(
-        child: ListTile(
-          title: Text(
-            title!,
-              style: TextStyle(
-                  color: Colors.white)),
+    return Stack(
+      children: [
+        Container(
+          height: 150,
+          width: 300,
+          decoration: BoxDecoration(
+            image:DecorationImage(
+                image: AssetImage(image!),
+                fit: BoxFit.cover),
+            borderRadius: BorderRadius.circular(6),),
+
         ),
-      ),
+      Positioned(
+        right: 5,
+        left: 5,
+        bottom: 15,
+        child: SizedBox(
+            height: 50,
+            width: 300,
+            child: Text(
+              title!,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.bold)
+              )),
+      )
+      ],
     );
   }
 }

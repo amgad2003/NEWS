@@ -17,7 +17,8 @@ AppBar titleAppBar(){
                style: TextStyle(
                  color: Colors.amber,
                  fontWeight: FontWeight.bold)
-             )],
-         ),
-   );
+             )
+           ]
+    ,)
+    ,);
  }

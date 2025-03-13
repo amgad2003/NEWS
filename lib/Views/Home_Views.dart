@@ -60,7 +60,7 @@ class HomeView extends StatelessWidget {
                           image: news[index]['path'],
                           title: news[index]['title'],),
                     );
-                  },),
+                  }),
               ),
               SizedBox(height: 22),
               Expanded(
@@ -70,8 +70,10 @@ class HomeView extends StatelessWidget {
                   itemCount: news.length,
                   itemBuilder: (context, index) {
                     return lastCoulmn(
-                        image: news[index]['path'], title: news[index]['title'], suTitle: news[index]['subTitle']);
-                  },),
+                        image: news[index]['path'],
+                        title: news[index]['title'],
+                        suTitle: news[index]['subTitle']);
+                  }),
               ),
             ]
           ),
